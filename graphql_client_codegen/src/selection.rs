@@ -185,6 +185,21 @@ impl<'query> ::std::convert::From<&'query SelectionSet> for Selection<'query> {
     }
 }
 
+impl<'a, 'query> std::iter::IntoIterator for &'a Selection<'query> {
+    type Item = SelectionItem<'query>;
+    type IntoIter = std::slice::Iter;
+
+    fn into_iterator(self) -> Self::IntoIter {
+        self.0.iter()
+    }
+}
+
+impl<'a, 'query> std::iter::Iterator for &'a Selection<'query> {
+    type Item = SelectionItem<'query>;
+
+    fn next(&mut self) -> Option<Self::Item> {}
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

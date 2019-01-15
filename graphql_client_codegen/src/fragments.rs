@@ -31,4 +31,8 @@ impl<'query> GqlFragment<'query> {
             ))?
         }
     }
+
+    pub(crate) fn is_recursive(&self, context: &QueryContext) -> bool {
+
+    }
 }

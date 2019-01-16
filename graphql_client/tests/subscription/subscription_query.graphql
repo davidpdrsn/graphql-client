@@ -1,5 +1,0 @@
-subscription Birthdays($filter: String) {
-  dogBirthdays(filter: $filter) {
-    name
-  }
-}

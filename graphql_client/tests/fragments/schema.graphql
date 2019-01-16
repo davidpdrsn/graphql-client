@@ -1,8 +1,0 @@
-schema {
-  query: QueryRoot
-}
-
-type QueryRoot {
-  extra: String
-  inFragment: String
-}

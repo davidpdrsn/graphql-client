@@ -1,9 +1,0 @@
-query VariablesQuery($msg: Message) {
-  echo(message: $msg) {
-    result
-  }
-}
-
-query RecursiveInputQuery($input: RecursiveInput!) {
-  saveRecursiveInput(recursiveInput: $input)
-}
